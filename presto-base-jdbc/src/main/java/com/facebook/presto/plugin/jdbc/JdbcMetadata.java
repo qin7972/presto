@@ -217,6 +217,7 @@ public class JdbcMetadata
     {
         JdbcOutputTableHandle jdbcInsertHandle = (JdbcOutputTableHandle) tableHandle;
         jdbcClient.finishInsertTable(jdbcInsertHandle);
+        clearRollback();
         return Optional.empty();
     }
 
